@@ -1,4 +1,5 @@
 #!/bin/bash
 
 echo "Installing python dependencies..."
-sudo -H pip3 install pandas gspread oauth2client google-api-python-client numpy 
+sudo -H pip3 install gspread pandas oauth2client google-api-python-client
+sudo -H pip3 install --upgrade google-api-python-client oauth2client

@@ -1,5 +1,3 @@
-alarm_clock_creds.json
-credentials.json
-token.pickle
+creds.json
 url.txt
-config.json
+__pycache__/

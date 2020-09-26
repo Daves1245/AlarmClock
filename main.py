@@ -26,6 +26,15 @@ def get_url():
 def clock():
     return
 
+def prepare_times(times):
+    for t in times:
+        """
+        if t <= '6:30AM':
+            do NOT wake me up earlier than 5:30
+        else:
+            times[t] -= time_shift (1hr?)
+        """
+
 def main():
     argparser = OptionParser()
     argparser.add_option("-u", "--url", dest = "url",
@@ -41,6 +50,7 @@ def main():
     sheet = client.open_by_url(url)
     schedule = sheet.get_worksheet(0)
     times = parse(schedule, "David")
+    wakeup_times = prepare_times(times)
     print(times)
 
 main()
